@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Assets/css/style.css">
+    <script src="Assets/js/script.js"></script>
 </head>
-<body>
+<body class="texto1">
     <img id="logoest" src="Assets/img/Estral_Esportslogo_profile.webp">
     <div id="menu">
         <a href="#inicio">
@@ -21,6 +22,7 @@
         <a href="#redes">
         <ul>Redes</ul>
     </a>
+    <button onclick="cambiarTamañoLetra" id="tamañoFuente">Fuente</button>
     </div>
     <div id="divinicio">
         <h1 id="inicio">Únete</h1>
@@ -52,18 +54,57 @@ Su formación es la siguiente:
             <h1 id="h1form">Formulario de contacto</h1>
             <p>Ingresa tus datos:</p>
             <label class="labelform">Nombre:</label>
-            <input class="formulario" type="text">
+            <input id="nombre" class="formulario" type="text">
+            <p class="pAlertaNombre">No puede estar vacío</p>
 
             <label class="labelform">Apellido:</label>
             <input class="formulario" type="text">
             
             <label class="labelform">Teléfono:</label>
-            <input class="formulario" type="tel">
+            <input id="telefono" class="formulario" type="tel">
 
             <label class="labelform">Correo Electrónico:</label>
             <input class="formulario" type="email">
 
-            <button type="submit">Enviar</button>
+            <label class="labelform">Hablanos de ti:</label>
+            <textarea class="formulario"></textarea>
+
+            <label class="labelform">Qué línea juegas:</label>
+            <label>
+            <input type="radio" name="line" id="lineTop" value="Top">Top
+            </label>
+
+            <label>
+                <input type="radio" name="line" id="lineMid" value="Mid">Mid
+            </label>
+
+            <label>
+                <input type="radio" name="line" id="lineBot" value="Bot">Bot
+            </label>
+
+            <label>
+                <input type="radio" name="line" id="lineJungla" value="Jungla">Jungla
+            </label>
+
+            <label>
+                <input type="radio" name="line" id="lineSoporte" value="Soporte">Soporte
+            </label>
+            <label id="formsexo">Sexo:</label>
+            <select class="formulario" id="sexo">
+                <option id="mas">
+                    Masculino
+                </option>
+                <option id="fem">
+                    Femenino
+                </option>
+            </select>
+            <label for="fechaNacimiento"> Ingresa tu fecha de nacimiento:</label>
+            <input class="formulario" type="date" id="fechaNacimiento">
+
+            <label>Color favorito:</label>
+            <input type="color">
+
+            <button type="submit" id="btnEnviar">Enviar</button>
             <button type="reset">Cancelar</button>
         </form>
     </div>
