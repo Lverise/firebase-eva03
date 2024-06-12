@@ -7,26 +7,27 @@
     <link rel="stylesheet" href="Assets/css/style.css">
     <script src="Assets/js/script.js"></script>
 </head>
-<body class="texto1">
+<body id="body" class="texto1">
     <img id="logoest" src="Assets/img/Estral_Esportslogo_profile.webp">
     <div id="menu">
         <a href="#inicio">
-        <ul>Inicio</ul>
+        <ul class="letras">Inicio</ul>
     </a>
     <a href="#divform">
-    <ul>Formulario de Contacto</ul>
+    <ul class="letras">Formulario de Contacto</ul>
 </a>
 <a href="#divabout">
-        <ul>Sobre Nosotros</ul>
+        <ul class="letras">Sobre Nosotros</ul>
         </a>
         <a href="#redes">
-        <ul>Redes</ul>
+        <ul class="letras">Redes</ul>
     </a>
-    <button onclick="cambiarTamañoLetra" id="tamañoFuente">Fuente</button>
+    <button id="btnFuente">Fuente</button>
+    <button id="btnContraste">Contraste</button>
     </div>
     <div id="divinicio">
         <h1 id="inicio">Únete</h1>
-        <pre id="pprinc">Estamos buscando nuevos jugadores para nuestro equipo de Esports Estral.
+        <pre class="letras" id="pprinc">Estamos buscando nuevos jugadores para nuestro equipo de Esports Estral.
 Se parte de el mejor equipo de la LLA (Liga Latinoamérica de LoL).
 
         </pre>
@@ -35,8 +36,8 @@ Se parte de el mejor equipo de la LLA (Liga Latinoamérica de LoL).
     </div>
     
     <div id="divabout">
-        <h1>Sobre Nosotros</h1>
-        <pre id="about">Estral es un equipo ya consolidado en el ámbito de los Esports,
+        <h1 class="letras">Sobre Nosotros</h1>
+        <pre class="letras" id="about">Estral es un equipo ya consolidado en el ámbito de los Esports,
 actual campeón de la LLA y actualmente participando en el MSI(Mid Season Invitational).
 Su formación es la siguiente:
 
@@ -50,58 +51,58 @@ Su formación es la siguiente:
         <img id="imgabout" src="Assets/img/estral.jpg">
     </div>
     <div id="divform">
-        <form>
-            <h1 id="h1form">Formulario de contacto</h1>
-            <p>Ingresa tus datos:</p>
-            <label class="labelform">Nombre:</label>
+        <form id="formu1">
+            <h1 id="h1form" class="letras">Formulario de contacto</h1>
+            <p class="letras">Ingresa tus datos:</p>
+            <label class="labelform letras">Nombre:</label>
             <input id="nombre" class="formulario" type="text">
-            <p class="pAlertaNombre">No puede estar vacío</p>
+            <p id="pAlerta" class="pAlertaNombre">No puede estar vacío</p>
 
-            <label class="labelform">Apellido:</label>
+            <label class="labelform letras">Apellido:</label>
             <input class="formulario" type="text">
             
-            <label class="labelform">Teléfono:</label>
+            <label class="labelform letras">Teléfono:</label>
             <input id="telefono" class="formulario" type="tel">
 
-            <label class="labelform">Correo Electrónico:</label>
+            <label class="labelform letras">Correo Electrónico:</label>
             <input class="formulario" type="email">
 
-            <label class="labelform">Hablanos de ti:</label>
+            <label class="labelform letras">Hablanos de ti:</label>
             <textarea class="formulario"></textarea>
 
-            <label class="labelform">Qué línea juegas:</label>
-            <label>
+            <label class="labelform letras">Qué línea juegas:</label>
+            <label class="letras">
             <input type="radio" name="line" id="lineTop" value="Top">Top
             </label>
 
-            <label>
+            <label class="letras">
                 <input type="radio" name="line" id="lineMid" value="Mid">Mid
             </label>
 
-            <label>
+            <label class="letras">
                 <input type="radio" name="line" id="lineBot" value="Bot">Bot
             </label>
 
-            <label>
+            <label class="letras">
                 <input type="radio" name="line" id="lineJungla" value="Jungla">Jungla
             </label>
 
-            <label>
+            <label class="letras">
                 <input type="radio" name="line" id="lineSoporte" value="Soporte">Soporte
             </label>
-            <label id="formsexo">Sexo:</label>
+            <label id="formsexo" class="letras">Sexo:</label>
             <select class="formulario" id="sexo">
-                <option id="mas">
+                <option class="letras" id="mas">
                     Masculino
                 </option>
-                <option id="fem">
+                <option class="letras" id="fem">
                     Femenino
                 </option>
             </select>
-            <label for="fechaNacimiento"> Ingresa tu fecha de nacimiento:</label>
-            <input class="formulario" type="date" id="fechaNacimiento">
+            <label class="letras" for="fechaNacimiento"> Ingresa tu fecha de nacimiento:</label>
+            <input class="formulario letras" type="date" id="fechaNacimiento">
 
-            <label>Color favorito:</label>
+            <label class="letras">Color favorito:</label>
             <input type="color">
 
             <button type="submit" id="btnEnviar">Enviar</button>
@@ -125,16 +126,16 @@ Su formación es la siguiente:
 
 <div id="menu">
     <a href="#inicio">
-    <ul>Inicio</ul>
+    <ul class="letras">Inicio</ul>
 </a>
 <a href="#divform">
-<ul>Formulario de Contacto</ul>
+<ul class="letras">Formulario de Contacto</ul>
 </a>
 <a href="#divabout">
-    <ul>Sobre Nosotros</ul>
+    <ul class="letras">Sobre Nosotros</ul>
     </a>
     <a href="#redes">
-    <ul>Redes</ul>
+    <ul class="letras">Redes</ul>
 </a>
 </a>
 </body>

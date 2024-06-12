@@ -12,11 +12,13 @@ body{
 button{
     margin-top: 10px;
     border-radius: 20%;
-    border-color: whitesmoke;
+    border-color: black;
 }
 #divform{
     width: 30%;
     margin: auto;
+    background-color: rgb(121, 102, 95);
+    color: black;
 }
 form{
     border-style: dashed;
@@ -25,7 +27,7 @@ form{
     padding-bottom: 10%;
     text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: whitesmoke;
+    color: black;
     margin-top: 10%;
 }
 #h1form{
@@ -49,7 +51,7 @@ form{
 #pprinc{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: inline;
-    color: whitesmoke;
+    color: black;
 }
 #logoest{
 width: 200px;
@@ -64,11 +66,11 @@ display: inline;
     display: inline;
 }
 h1{
-    color: whitesmoke;
+    color: black;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #about{
-color: whitesmoke;
+color: black;
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #imgabout{
@@ -86,7 +88,7 @@ html{
     margin: auto;
 }
 ul{
-    color: whitesmoke;
+    color: black;
 }
 
 #formsexo{
@@ -102,10 +104,10 @@ ul{
     font-size: 18px;
 }
 .texto2{
-    font-size: 30px;
+    font-size: 22px;
 }
 .texto3{
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .pAlertaNombre{
@@ -114,4 +116,8 @@ display: none;
 }
 .pAlertaNombreVisible{
     color: red;
+}
+
+.letras{
+content: none;
 }
