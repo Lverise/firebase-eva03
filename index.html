@@ -53,44 +53,52 @@ Su formación es la siguiente:
     <div id="divform">
         <form id="formu1">
             <h1 id="h1form" class="letras">Formulario de contacto</h1>
+
             <p class="letras">Ingresa tus datos:</p>
+
             <label class="labelform letras">Nombre:</label>
             <input id="nombre" class="formulario" type="text">
-            <p id="pAlerta" class="pAlertaNombre">No puede estar vacío</p>
+            <p id="pnombre" class="alerta">No puede estar vacío</p>
 
             <label class="labelform letras">Apellido:</label>
-            <input class="formulario" type="text">
+            <input id="apellido" class="formulario" type="text">
+            <p id="papellido" class="alerta">No puede estar vacío</p>
             
             <label class="labelform letras">Teléfono:</label>
             <input id="telefono" class="formulario" type="tel">
+            <p id="ptelefono" class="alerta">No puede estar vacío</p>
 
             <label class="labelform letras">Correo Electrónico:</label>
-            <input class="formulario" type="email">
+            <input id="email" class="formulario" type="email">
+            <p id="pemail" class="alerta">No puede estar vacío</p>
 
             <label class="labelform letras">Hablanos de ti:</label>
-            <textarea class="formulario"></textarea>
+            <textarea id="textabout" class="formulario"></textarea>
+            <p id="ptextabout" class="alerta">No puede estar vacío</p>
 
             <label class="labelform letras">Qué línea juegas:</label>
-            <label class="letras">
+            <label class="letras linea">
             <input type="radio" name="line" id="lineTop" value="Top">Top
             </label>
 
-            <label class="letras">
+            <label class="letras linea">
                 <input type="radio" name="line" id="lineMid" value="Mid">Mid
             </label>
 
-            <label class="letras">
+            <label class="letras linea">
                 <input type="radio" name="line" id="lineBot" value="Bot">Bot
             </label>
 
-            <label class="letras">
+            <label class="letras linea">
                 <input type="radio" name="line" id="lineJungla" value="Jungla">Jungla
             </label>
 
-            <label class="letras">
+            <label class="letras linea">
                 <input type="radio" name="line" id="lineSoporte" value="Soporte">Soporte
             </label>
+            <p id="pline" class="alerta">Tienes que seleccionar uno</p>
             <label id="formsexo" class="letras">Sexo:</label>
+            <p id="pformsexo" class="alerta">Tienes que seleccionar uno</p>
             <select class="formulario" id="sexo">
                 <option class="letras" id="mas">
                     Masculino
@@ -98,14 +106,15 @@ Su formación es la siguiente:
                 <option class="letras" id="fem">
                     Femenino
                 </option>
+                <p id="psexo" class="alerta">Selecciona uno</p>
             </select>
             <label class="letras" for="fechaNacimiento"> Ingresa tu fecha de nacimiento:</label>
             <input class="formulario letras" type="date" id="fechaNacimiento">
-
+            <p id="pfechaNacimiento" class="alerta">No puede estar vacío</p>
             <label class="letras">Color favorito:</label>
             <input type="color">
 
-            <button type="submit" id="btnEnviar">Enviar</button>
+            <button type="button" id="btnEnviar">Enviar</button>
             <button type="reset">Cancelar</button>
         </form>
     </div>

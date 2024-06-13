@@ -110,14 +110,13 @@ ul{
     font-size: 30px;
 }
 
-.pAlertaNombre{
-color: red;
-display: none;
-}
-.pAlertaNombreVisible{
+.alerta{
+    display: none;
     color: red;
 }
-
 .letras{
 content: none;
+}
+.linea{
+    display: block;
 }

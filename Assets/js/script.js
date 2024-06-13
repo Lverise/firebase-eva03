@@ -1,6 +1,7 @@
 window.addEventListener("load", ()=>{
     document.getElementById("btnFuente").addEventListener("click",cambiarTamañoLetra);
     document.getElementById("btnContraste").addEventListener("click",cambiarContraste);
+    document.getElementById("btnEnviar").addEventListener("click",validar)
 })
 
 
@@ -55,5 +56,43 @@ function cambiarContraste(){
         for (let index = 0; index < letras.length; index++) {
             const element = letras[index];
             element.style.color = "black";}
+    }
+}
+
+//se usa esta funcion para no hacer la misma funcion todas las veces que se quiera validar los espacios vacios
+function validar(){
+    validarEspaciosVacios("nombre")
+    validarEspaciosVacios("apellido")
+    validarEspaciosVacios("telefono")
+    validarEspaciosVacios("email")
+    validarEspaciosVacios("textabout")
+    //validarEspaciosVacios("line")
+    //validarEspaciosVacios("formsexo")
+    //validarEspaciosVacios("fechaNacimiento")
+    //validarEspaciosVacios("color")
+
+} 
+//comprueba que los datos de los inputs no esten vacios, de lo contrario muestra un mensaje
+function validarEspaciosVacios(idEtiqueta){
+    //se recupera una etiqueta
+    let etiqueta = document.getElementById(idEtiqueta)
+    console.log(etiqueta)
+    //se recupera el valor que tiene
+    let etiquetaValor = etiqueta.value
+    //se recupera el parrafo con display none para mostrar el error en caso de ser necesario
+    let parrafoAlerta = document.getElementById("p"+idEtiqueta)
+    //se comprueba si esta vacio el campo
+    if (etiquetaValor.trim()==""){
+    //si esta vacio se cambia el color del borde del input a rojo
+        etiqueta.style.borderColor = "red"
+    //y el parrafo con display none ahora se vuelve visible poniendo el display en block
+        parrafoAlerta.style.display = "block"
+    }
+    //si el campo tiene valores dentro entonces hace lo siguiente
+    else{
+        //mantiene escondido el parrafo
+        parrafoAlerta.style.display = "none"
+        //el color de borde del input se vuelve verde confirmando que el valor es correcto
+        etiqueta.style.borderColor = "green"
     }
 }
