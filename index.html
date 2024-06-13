@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Assets/css/style.css">
-    <script src="Assets/js/script.js"></script>
+    <script src="Assets/js/firebase.js" type="module"></script>
+    <script src="Assets/js/script.js" type="module"></script>
 </head>
 <body id="body" class="texto1">
     <img id="logoest" src="Assets/img/Estral_Esportslogo_profile.webp">
@@ -100,10 +101,10 @@ Su formación es la siguiente:
             <label id="formsexo" class="letras">Sexo:</label>
             <p id="pformsexo" class="alerta">Tienes que seleccionar uno</p>
             <select class="formulario" id="sexo">
-                <option class="letras" id="mas">
+                <option class="letras" id="mas" value="Masculino">
                     Masculino
                 </option>
-                <option class="letras" id="fem">
+                <option class="letras" id="fem" value="Femenino">
                     Femenino
                 </option>
                 <p id="psexo" class="alerta">Selecciona uno</p>
@@ -112,12 +113,63 @@ Su formación es la siguiente:
             <input class="formulario letras" type="date" id="fechaNacimiento">
             <p id="pfechaNacimiento" class="alerta">No puede estar vacío</p>
             <label class="letras">Color favorito:</label>
-            <input type="color">
+            <input id="color" type="color">
 
             <button type="button" id="btnEnviar">Enviar</button>
             <button type="reset">Cancelar</button>
         </form>
+
+
     </div>
+    <form>
+    <h1>Actualizar</h1>
+<input type="text" id="UPDnombre" placeholder="Nombre...">
+<input type="text" id="UPDapellido" placeholder="Apellido...">
+<input type="tel" id="UPDTelefono" placeholder="Teléfono...">
+<input type="text" id="UPDemail" placeholder="Correo Electrónico...">
+<input type="text" id="UPDabout" placeholder="Cuentanos sobre ti...">
+<label class="labelform letras">Qué línea juegas:</label>
+
+<label class="letras linea">
+<input type="radio" name="UPDline" id="lineTop" value="Top">Top
+</label>
+
+<label class="letras linea">
+    <input type="radio" name="UPDline" id="lineMid" value="Mid">Mid
+</label>
+
+<label class="letras linea">
+    <input type="radio" name="UPDline" id="lineBot" value="Bot">Bot
+</label>
+
+<label class="letras linea">
+    <input type="radio" name="UPDline" id="lineJungla" value="Jungla">Jungla
+</label>
+
+<label class="letras linea">
+    <input type="radio" name="UPDline" id="lineSoporte" value="Soporte">Soporte
+</label>
+
+<label for="UPDsexo">Selecciona tu sexo:</label>
+<select class="formulario" id="UPDsexo">
+    <option class="letras" id="mas" value="Masculino">
+        Masculino
+    </option>
+    <option class="letras" id="fem" value="Femenino">
+        Femenino
+    </option>
+    <p id="psexo" class="alerta">Selecciona uno</p>
+</select>
+<input type="date" id="UPDfechaNacimiento" placeholder="Fecha de nacimiento...">
+<input type="color" id="UPDcolor" placeholder="Nombre...">
+
+<button type="button" id="btnActualizar">Actualizar</button>
+<button type="reset">Cancelar</button>
+    </form>
+
+<br>
+<br>
+<br>
     <div id="redes">
     <a href="https://www.instagram.com/estralesports/?hl=es">
         <img class="imglogo" src="Assets/img/Instagram_icon.png.webp">

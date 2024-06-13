@@ -1,8 +1,87 @@
-window.addEventListener("load", ()=>{
+import { registrarJugador, actualizarJugador } from "./promesas.js"
+
+//se agrega un listener para que se ejecuten las funciones cuando ya haya cargado la pagina
+addEventListener("load", ()=>{
     document.getElementById("btnFuente").addEventListener("click",cambiarTamañoLetra);
     document.getElementById("btnContraste").addEventListener("click",cambiarContraste);
     document.getElementById("btnEnviar").addEventListener("click",validar)
+    document.getElementById("btnEnviar").addEventListener("click", registrar);
+    document.getElementById("btnActualizar").addEventListener("click", actualizar)
 })
+
+const registrar = ()=> {
+    //recupero todos los elementos necesarios
+    let eNombre = document.getElementById("nombre");
+    let eApellido = document.getElementById("apellido");
+    let eTelefono = document.getElementById("telefono");
+    let eEmail = document.getElementById("email");
+    let eAbout = document.getElementById("textabout");
+
+// recupero el primer input type radio con name="line" que esté marcado como seleccionado
+    let eLinea = document.querySelector('input[name="line"]:checked');
+    let eSexo = document.getElementById("sexo")
+    let eFechaNacimiento = document.getElementById("fechaNacimiento")
+    let eColor = document.getElementById("color")
+    let vNombre = eNombre.value
+    let vApellido = eApellido.value
+    let vTelefono = eTelefono.value
+    let vEmail = eEmail.value
+    let vAbout = eAbout.value
+    let vSexo = eSexo.value
+    let vLinea =  eLinea.value;
+    console.log(vSexo)
+    let vFechaNacimiento = eFechaNacimiento.value
+    let vColor = eColor.value
+    //se agregan a un objeto
+    let objeto ={nombre:vNombre,apellido:vApellido,telefono:vTelefono,email:vEmail,about:vAbout,linea:vLinea,sexo:vSexo,fechaNacimiento:vFechaNacimiento,color:vColor}
+// se usa la funcion de firebase para registrar y se muestra un mensaje de confrimacion en caso de que logre
+    registrarJugador(objeto).then(()=>{
+        alert("Se registra con éxito al jugador")
+    })
+}
+
+const actualizar = ()=>{
+    //Recupero elemento
+    let eNombre = document.getElementById("UPDnombre");
+    let eApellido = document.getElementById("UPDapellido");
+    let eTelefono = document.getElementById("UPDtelefono");
+    let eEmail = document.getElementById("UPDemail");
+    let eAbout = document.getElementById("UPDtextabout");
+    let eLinea = document.querySelector('input[name="UPDline"]:checked');
+    let eSexo = document.getElementById("UPDsexo")
+    let eFechaNacimiento = document.getElementById("UPDfechaNacimiento")
+    let eColor = document.getElementById("UPDcolor")
+    let vNombre = eNombre.value
+    let vApellido = eApellido.value
+    let vTelefono = eTelefono.value
+
+    let vEmail = eEmail.value
+    let vAbout = eAbout.value
+    let vSexo = eSexo.value
+    let vLinea =  eLinea.value;
+    console.log(vSexo)
+    let vFechaNacimiento = eFechaNacimiento.value
+    let vColor = eColor.value
+    //se agregan a un objeto
+    let objeto ={nombre:vNombre,apellido:vApellido,telefono:vTelefono,email:vEmail,about:vAbout,linea:vLinea,sexo:vSexo,fechaNacimiento:vFechaNacimiento,color:vColor}
+
+
+    let id = document.getElementById("btnActualizar").value;
+    //Envío el objeto y el id a las promesas
+
+    //Cargar algo tipo loading...(para evitar que se aprete el boton muchas veces)
+    document.getElementById("btnActualizar").disabled = "True";
+    actualizarJugador(objeto,id).then(()=>{
+        alert("Se actualiza con éxito")
+        document.getElementById("btnActualizar").disabled = "False";
+    }).catch((e)=>{
+        console.log(e)
+        //catch para que en caso de algo falle, se recoga el error y lo especifique.
+    }).finally(()=>{
+        document.getElementById("btnActualizar").disabled = "";
+        //finally para que se active el boton aunque falle la promesa
+    })
+}
 
 
 //Esta función cambia las clases que tiene el body por unas ya creadas y que cambian el tamaño de las letras
@@ -76,7 +155,7 @@ function validar(){
 function validarEspaciosVacios(idEtiqueta){
     //se recupera una etiqueta
     let etiqueta = document.getElementById(idEtiqueta)
-    console.log(etiqueta)
+    //console.log(etiqueta)
     //se recupera el valor que tiene
     let etiquetaValor = etiqueta.value
     //se recupera el parrafo con display none para mostrar el error en caso de ser necesario
